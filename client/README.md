@@ -1,4 +1,4 @@
-Destitnation
+Destination
 
 This project is a clone of air-BnB.
 
@@ -11,3 +11,4 @@ Node
 Mongo
 Express
 Tailwind css
+axios
