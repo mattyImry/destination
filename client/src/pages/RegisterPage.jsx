@@ -1,14 +1,36 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function RegisterPage() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function registerUser() {}
+
     return (
         <div className="mt-4 grow flex items-center justify-around">
             <div className="mb-64">
                 <h1 className="text-4xl text-center mb-4">Register</h1>
-                <form className="max-w-md mx-auto">
-                    <input type="text" placeholder="Your name.." />
-                    <input type="email" placeholder="email address"></input>
-                    <input type="password" placeholder="password"></input>
+                <form className="max-w-md mx-auto" onSubmit={registerUser}>
+                    <input
+                        type="text"
+                        placeholder="Your name.."
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                        type="email"
+                        placeholder="email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+                    <input
+                        type="password"
+                        placeholder="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    ></input>
                     <button className="primary"> Register</button>
                     <div className="text-center py-2 text-gray-500">
                         Already Have An Account?
